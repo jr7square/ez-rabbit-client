@@ -1,0 +1,14 @@
+package main
+
+templ page(pageContent templ.Component) {
+    <html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"></link> 
+    </head>
+    <body data-theme="dark">
+        <main class="container">
+            @pageContent
+        </main>
+    </body>
+    </html>
+}

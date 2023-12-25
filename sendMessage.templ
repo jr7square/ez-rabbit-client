@@ -1,0 +1,22 @@
+package main
+
+templ sendMessage(message string, exchange string, key string, errorMessage string) {
+    <h2>Publish message</h2>
+    if errorMessage != "" {
+        <article> { errorMessage }</article>
+    }
+    <form method="post">
+        <label for="fExchange">Exchange Name (same as queue name in most cases)</label>
+        <input id="fExchange" name="exchange" value={ exchange }></input>
+        <label for="frouting">Queue Name</label>
+        <input id="frouting" name="routingKey" value={ key }></input>
+        <label for="fTextArea">Json message</label>
+        <textarea id="fTextArea" name="queueMessage" autofocus rows="20" cols="60">
+        if message != "" {
+            { message }
+        }
+        </textarea>
+        <input type="submit" value="Submit"></input>
+    </form>
+
+}
