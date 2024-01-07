@@ -18,7 +18,7 @@ type versionInfo struct {
 }
 
 func main() {
-	doPrompt := flag.Bool("noPrompt", true, "No prompt fo ez development")
+	doPrompt := flag.Bool("noPrompt", true, "No prompt for ez development")
 	flag.Parse()
 	dialUrl := "amqp://guest:guest@localhost:5672/"
 	if *doPrompt {
