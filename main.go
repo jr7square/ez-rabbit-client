@@ -12,6 +12,11 @@ import (
 	"github.com/jr7square/ezrabbitclient/rabbit"
 )
 
+type versionInfo struct {
+	clientVersion string
+	goVersion     string
+}
+
 func main() {
 	doPrompt := flag.Bool("noPrompt", true, "no prompt fo ez development")
 	flag.Parse()
